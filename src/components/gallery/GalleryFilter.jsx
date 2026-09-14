@@ -1,0 +1,32 @@
+import React from 'react';
+import { GALLERY_CATEGORIES } from '../../data/galleryData';
+
+export default function GalleryFilter({ activeCategory, onSelectCategory, itemCounts }) {
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-8 sm:my-12">
+      {GALLERY_CATEGORIES.map((category) => {
+        const isActive = activeCategory === category;
+        const count = itemCounts ? itemCounts[category] : null;
+
+        return (
+          <button
+            key={category}
+            onClick={() => onSelectCategory(category)}
+            className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-sans transition-all duration-300 focus:outline-none ${
+              isActive
+                ? 'bg-[#1F1B18] text-[#FAF7F2] border border-[#1F1B18] shadow-sm'
+                : 'bg-[#FAF7F2] text-[#1F1B18]/70 border border-[#C8B6A6]/40 hover:border-[#1F1B18] hover:text-[#1F1B18]'
+            }`}
+          >
+            <span>{category}</span>
+            {count !== undefined && (
+              <span className={`ml-2 text-[10px] ${isActive ? 'text-[#C5A059]' : 'text-[#8E7B6C]'}`}>
+                ({count})
+              </span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
