@@ -34,16 +34,17 @@ export default function Hero({ onExplore, onDiscoverStory }) {
           <span>{hero.badge}</span>
         </div>
 
-        {/* Brand Headline */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.14em] sm:tracking-[0.18em] font-normal uppercase text-[#FAF7F2] leading-tight sm:leading-none mb-6 max-w-4xl drop-shadow-sm">
-          AISHKA
-          <span className="block font-light text-2xl sm:text-4xl md:text-5xl tracking-[0.3em] text-[#C8B6A6] mt-2 sm:mt-3">
-            CLOTHING
-          </span>
-        </h1>
+        {/* Brand Headline with Uploaded Logo Emblem */}
+        <div className="mb-4">
+          <img
+            src="/logo-transparent-light.png"
+            alt="AISHKA CLOTHING"
+            className="h-28 sm:h-36 md:h-40 w-auto mx-auto object-contain drop-shadow-lg transition-transform hover:scale-105 duration-500"
+          />
+        </div>
 
         {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-base md:text-lg text-[#FAF7F2]/85 font-light tracking-wide max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="font-sans text-sm sm:text-base md:text-lg text-[#FAF7F2]/90 font-light tracking-wide max-w-2xl mx-auto mb-10 leading-relaxed">
           {hero.subtitle}
         </p>
 
@@ -51,7 +52,7 @@ export default function Hero({ onExplore, onDiscoverStory }) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
           <button
             onClick={onExplore}
-            className="w-full sm:w-auto px-8 py-4 bg-[#FAF7F2] text-[#1F1B18] text-xs uppercase tracking-[0.25em] font-medium hover:bg-[#C5A059] hover:text-[#FAF7F2] transition-all duration-300 shadow-luxury border border-[#FAF7F2]"
+            className="w-full sm:w-auto px-8 py-4 bg-[#5A664D] text-[#FAF7F2] text-xs uppercase tracking-[0.25em] font-medium hover:bg-[#434D39] transition-all duration-300 shadow-luxury border border-[#5A664D]"
           >
             {hero.primaryCta}
           </button>

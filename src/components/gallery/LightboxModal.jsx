@@ -31,7 +31,7 @@ export default function LightboxModal({ item, isOpen, onClose }) {
       />
 
       {/* Modal Card */}
-      <div className="relative bg-[#FAF7F2] w-full max-w-4xl border border-[#C8B6A6]/50 shadow-2xl z-10 my-auto overflow-hidden">
+      <div className="relative bg-[#F2F7EE] w-full max-w-4xl border border-[#5A664D]/30 shadow-2xl z-10 my-auto overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -52,9 +52,9 @@ export default function LightboxModal({ item, isOpen, onClose }) {
           </div>
 
           {/* Details Column */}
-          <div className="md:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-[#FAF7F2]">
+          <div className="md:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-[#F2F7EE]">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-1.5 text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium">
+              <div className="inline-flex items-center space-x-1.5 text-[10px] uppercase tracking-[0.25em] text-[#5A664D] font-medium">
                 <Sparkles size={12} />
                 <span>{item.category}</span>
               </div>
@@ -63,18 +63,18 @@ export default function LightboxModal({ item, isOpen, onClose }) {
                 {item.title}
               </h3>
 
-              <div className="w-10 h-[1px] bg-[#C5A059]" />
+              <div className="w-10 h-[1px] bg-[#5A664D]" />
 
-              <p className="text-xs sm:text-sm text-[#6E665F] font-light leading-relaxed font-sans">
+              <p className="text-xs sm:text-sm text-[#5A664D]/90 font-light leading-relaxed font-sans">
                 {item.description}
               </p>
 
               {item.details && (
-                <div className="pt-3 border-t border-[#C8B6A6]/30">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#8E7B6C] block mb-1.5 font-medium">
+                <div className="pt-3 border-t border-[#5A664D]/20">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#5A664D] block mb-1.5 font-medium">
                     Textile & Craft Details
                   </span>
-                  <p className="text-xs text-[#1F1B18] font-light font-sans bg-[#EFECE6]/60 p-3 border border-[#C8B6A6]/30">
+                  <p className="text-xs text-[#1F1B18] font-light font-sans bg-[#E8EFE3] p-3 border border-[#5A664D]/20">
                     {item.details}
                   </p>
                 </div>
@@ -82,10 +82,10 @@ export default function LightboxModal({ item, isOpen, onClose }) {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-6 mt-6 border-t border-[#C8B6A6]/30 space-y-3">
+            <div className="pt-6 mt-6 border-t border-[#5A664D]/20 space-y-3">
               <button
                 onClick={handleInquireWhatsApp}
-                className="w-full py-3.5 bg-[#25D366] text-white text-xs uppercase tracking-[0.2em] font-medium hover:bg-[#20ba59] transition-colors flex items-center justify-center space-x-2"
+                className="w-full py-3.5 bg-[#25D366] text-white text-xs uppercase tracking-[0.2em] font-medium hover:bg-[#20ba59] transition-colors flex items-center justify-center space-x-2 shadow-sm"
               >
                 <MessageSquare size={16} />
                 <span>Inquire on WhatsApp</span>
@@ -93,7 +93,7 @@ export default function LightboxModal({ item, isOpen, onClose }) {
 
               <button
                 onClick={onClose}
-                className="w-full py-2.5 text-center text-xs uppercase tracking-[0.2em] text-[#8E7B6C] hover:text-[#1F1B18] transition-colors font-sans"
+                className="w-full py-2.5 text-center text-xs uppercase tracking-[0.2em] text-[#5A664D] hover:text-[#1F1B18] transition-colors font-sans"
               >
                 Back to Lookbook
               </button>

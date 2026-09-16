@@ -8,19 +8,24 @@ export default {
     extend: {
       colors: {
         brand: {
-          beige: '#FAF7F2',
-          ivory: '#F5F3EF',
-          warm: '#EFECE6',
-          taupe: '#C8B6A6',
-          'taupe-light': '#E6DDD4',
-          'taupe-dark': '#8E7B6C',
+          sage: '#5A664D',
+          'sage-dark': '#434D39',
+          'sage-deep': '#262E20',
+          'sage-bg': '#E8EFE3',
+          'sage-surface': '#F2F7EE',
+          beige: '#E8EFE3',
+          ivory: '#F2F7EE',
+          warm: '#DFE7DA',
+          taupe: '#BFCBB6',
+          'taupe-light': '#E2EAD8',
+          'taupe-dark': '#5A664D',
           gold: '#C5A059',
           'gold-light': '#DFC48A',
           'gold-dark': '#9E7E38',
           dark: '#1F1B18',
           charcoal: '#2E2824',
-          muted: '#6E665F',
-          border: 'rgba(200, 182, 166, 0.35)',
+          muted: '#5A664D',
+          border: 'rgba(90, 102, 77, 0.25)',
         }
       },
       fontFamily: {

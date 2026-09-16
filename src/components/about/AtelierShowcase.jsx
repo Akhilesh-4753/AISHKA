@@ -5,7 +5,7 @@ export default function AtelierShowcase({ onOpenAppointment, onContact }) {
   const { atelier } = CONTENT.about;
 
   return (
-    <section className="py-20 sm:py-28 bg-[#FAF7F2] text-[#1F1B18]">
+    <section className="py-20 sm:py-28 bg-[#E8EFE3] text-[#1F1B18]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="bg-[#1F1B18] text-[#FAF7F2] p-8 sm:p-14 lg:p-16 border border-[#FAF7F2]/10 shadow-luxury">
@@ -45,7 +45,7 @@ export default function AtelierShowcase({ onOpenAppointment, onContact }) {
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={onOpenAppointment}
-                  className="px-6 py-3.5 bg-[#C5A059] text-[#1F1B18] text-xs uppercase tracking-[0.2em] font-medium hover:bg-[#FAF7F2] transition-colors"
+                  className="px-6 py-3.5 bg-[#5A664D] text-[#FAF7F2] text-xs uppercase tracking-[0.2em] font-medium hover:bg-[#434D39] transition-colors shadow-sm"
                 >
                   Schedule an Atelier Visit
                 </button>

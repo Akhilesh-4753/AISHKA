@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { X, Sparkles, CheckCircle2, MessageSquare } from 'lucide-react';
+import { X, Calendar, Clock, CheckCircle2, MessageSquare, Sparkles } from 'lucide-react';
 import { THEME } from '../../styles/theme';
 
 export default function AppointmentModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
-    service: 'Bridal & Festive Couture Consultation',
+    service: 'Bespoke Bridal & Festive Couture Consultation',
     date: '',
     timeSlot: 'Morning (11:00 AM - 1:00 PM)',
     notes: '',
@@ -18,8 +17,10 @@ export default function AppointmentModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -53,9 +54,9 @@ export default function AppointmentModal({ isOpen, onClose }) {
       />
 
       {/* Modal Container */}
-      <div className="relative bg-[#FAF7F2] w-full max-w-xl border border-[#C8B6A6]/40 shadow-2xl z-10 my-8 overflow-hidden">
-        {/* Top Gold Border Accent */}
-        <div className="h-1.5 w-full bg-gradient-to-r from-[#FAF7F2] via-[#C5A059] to-[#FAF7F2]" />
+      <div className="relative bg-[#F2F7EE] w-full max-w-xl border border-[#5A664D]/30 shadow-2xl z-10 my-8 overflow-hidden">
+        {/* Top Accent */}
+        <div className="h-1.5 w-full bg-gradient-to-r from-[#E8EFE3] via-[#5A664D] to-[#E8EFE3]" />
 
         {/* Close Button */}
         <button
@@ -70,14 +71,19 @@ export default function AppointmentModal({ isOpen, onClose }) {
           {!submitted ? (
             <>
               <div className="text-center mb-6">
-                <div className="inline-flex items-center space-x-2 text-[10px] tracking-[0.25em] uppercase text-[#C5A059] font-medium mb-1">
+                <img
+                  src="/logo-transparent.png"
+                  alt="AISHKA CLOTHING"
+                  className="h-10 sm:h-12 w-auto mx-auto mb-2 object-contain"
+                />
+                <div className="inline-flex items-center space-x-2 text-[10px] tracking-[0.25em] uppercase text-[#5A664D] font-medium mb-1">
                   <Sparkles size={12} />
                   <span>Private Atelier Fitting</span>
                 </div>
                 <h3 className="font-serif text-2xl sm:text-3xl text-[#1F1B18] font-normal tracking-wide">
                   Book an Appointment
                 </h3>
-                <p className="text-xs text-[#8E7B6C] mt-1 font-light max-w-md mx-auto">
+                <p className="text-xs text-[#5A664D]/90 mt-1 font-light max-w-md mx-auto">
                   Experience personal draping, custom bespoke sizing, and private consultations with our creative team.
                 </p>
               </div>
@@ -92,7 +98,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="w-full bg-[#FAF7F2] border border-[#C8B6A6]/60 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#C5A059] focus:outline-none transition-colors"
+                    className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#5A664D] focus:outline-none transition-colors"
                   >
                     <option value="Bridal & Festive Couture Consultation">Bespoke Bridal & Festive Couture Consultation</option>
                     <option value="Everyday Casual Wear Custom Sizing">Everyday Casual Wear Made-to-Measure</option>
@@ -113,7 +119,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                       onChange={handleChange}
                       required
                       placeholder="e.g. Ayesha Sharma"
-                      className="w-full bg-white/70 border border-[#C8B6A6]/60 px-3.5 py-2.5 text-xs text-[#1F1B18] placeholder-[#8E7B6C]/50 focus:border-[#C5A059] focus:outline-none transition-colors"
+                      className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2.5 text-xs text-[#1F1B18] placeholder-[#5A664D]/50 focus:border-[#5A664D] focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -127,7 +133,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                       onChange={handleChange}
                       required
                       placeholder="+91 98765 43210"
-                      className="w-full bg-white/70 border border-[#C8B6A6]/60 px-3.5 py-2.5 text-xs text-[#1F1B18] placeholder-[#8E7B6C]/50 focus:border-[#C5A059] focus:outline-none transition-colors"
+                      className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2.5 text-xs text-[#1F1B18] placeholder-[#5A664D]/50 focus:border-[#5A664D] focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -143,7 +149,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                       value={formData.date}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white/70 border border-[#C8B6A6]/60 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#C5A059] focus:outline-none transition-colors"
+                      className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#5A664D] focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -155,7 +161,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                       value={formData.timeSlot}
                       onChange={handleChange}
                       required
-                      className="w-full bg-[#FAF7F2] border border-[#C8B6A6]/60 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#C5A059] focus:outline-none transition-colors"
+                      className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2.5 text-xs text-[#1F1B18] focus:border-[#5A664D] focus:outline-none transition-colors"
                     >
                       <option value="Morning (11:00 AM - 1:00 PM)">Morning (11:00 AM - 1:00 PM)</option>
                       <option value="Afternoon (2:00 PM - 4:30 PM)">Afternoon (2:00 PM - 4:30 PM)</option>
@@ -174,21 +180,21 @@ export default function AppointmentModal({ isOpen, onClose }) {
                     onChange={handleChange}
                     rows="2"
                     placeholder="Occasion date, preferred fabrics, or silhouette queries..."
-                    className="w-full bg-white/70 border border-[#C8B6A6]/60 px-3.5 py-2 text-xs text-[#1F1B18] placeholder-[#8E7B6C]/50 focus:border-[#C5A059] focus:outline-none transition-colors resize-none"
+                    className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-3.5 py-2 text-xs text-[#1F1B18] placeholder-[#5A664D]/50 focus:border-[#5A664D] focus:outline-none transition-colors resize-none"
                   />
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <button
                     type="submit"
-                    className="flex-1 py-3 bg-[#1F1B18] text-[#FAF7F2] text-xs uppercase tracking-[0.2em] font-sans font-medium hover:bg-[#FAF7F2] hover:text-[#1F1B18] border border-[#1F1B18] transition-all"
+                    className="flex-1 py-3 bg-[#5A664D] text-[#FAF7F2] text-xs uppercase tracking-[0.2em] font-sans font-medium hover:bg-[#434D39] border border-[#5A664D] transition-all shadow-sm"
                   >
                     SUBMIT REQUEST
                   </button>
                   <button
                     type="button"
                     onClick={handleWhatsAppDirect}
-                    className="flex-1 py-3 bg-[#25D366] text-white text-xs uppercase tracking-[0.18em] font-sans font-medium hover:bg-[#20ba59] transition-all flex items-center justify-center space-x-2"
+                    className="flex-1 py-3 bg-[#25D366] text-white text-xs uppercase tracking-[0.18em] font-sans font-medium hover:bg-[#20ba59] transition-all flex items-center justify-center space-x-2 shadow-sm"
                   >
                     <MessageSquare size={15} />
                     <span>BOOK VIA WHATSAPP</span>
@@ -198,23 +204,23 @@ export default function AppointmentModal({ isOpen, onClose }) {
             </>
           ) : (
             <div className="py-8 text-center space-y-4 animate-fade-in">
-              <div className="w-16 h-16 rounded-full bg-[#FAF7F2] border-2 border-[#C5A059] flex items-center justify-center mx-auto text-[#C5A059]">
+              <div className="w-16 h-16 rounded-full bg-[#E8EFE3] border-2 border-[#5A664D] flex items-center justify-center mx-auto text-[#5A664D]">
                 <CheckCircle2 size={32} />
               </div>
               <h3 className="font-serif text-3xl text-[#1F1B18]">Request Received</h3>
-              <p className="text-xs text-[#8E7B6C] font-light max-w-sm mx-auto leading-relaxed">
+              <p className="text-xs text-[#5A664D] font-light max-w-sm mx-auto leading-relaxed">
                 Thank you, <span className="font-medium text-[#1F1B18]">{formData.name}</span>. Our atelier concierge will contact you via WhatsApp/Phone within 24 hours to confirm your slot for <span className="font-medium text-[#1F1B18]">{formData.service}</span>.
               </p>
               <div className="pt-4 flex justify-center space-x-3">
                 <button
                   onClick={handleWhatsAppDirect}
-                  className="px-5 py-2.5 bg-[#25D366] text-white text-xs uppercase tracking-wider font-sans font-medium"
+                  className="px-5 py-2.5 bg-[#25D366] text-white text-xs uppercase tracking-wider font-sans font-medium shadow-sm"
                 >
                   Message Us on WhatsApp Now
                 </button>
                 <button
                   onClick={resetAndClose}
-                  className="px-5 py-2.5 border border-[#1F1B18] text-[#1F1B18] text-xs uppercase tracking-wider font-sans"
+                  className="px-5 py-2.5 border border-[#5A664D] text-[#5A664D] hover:bg-[#5A664D] hover:text-[#FAF7F2] transition-colors text-xs uppercase tracking-wider font-sans"
                 >
                   Done
                 </button>

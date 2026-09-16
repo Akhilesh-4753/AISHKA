@@ -6,7 +6,7 @@ export default function BrandQuote({ onReadMore }) {
   const { aesthetic } = CONTENT.home;
 
   return (
-    <section id="aishka-aesthetic" className="py-20 sm:py-28 bg-[#FAF7F2] text-[#1F1B18] border-b border-[#C8B6A6]/25">
+    <section id="aishka-aesthetic" className="py-20 sm:py-28 bg-[#E8EFE3] text-[#1F1B18] border-b border-[#5A664D]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
@@ -14,9 +14,9 @@ export default function BrandQuote({ onReadMore }) {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative">
               {/* Outer decorative frame */}
-              <div className="absolute -inset-3 sm:-inset-4 border border-[#C8B6A6]/40 pointer-events-none" />
+              <div className="absolute -inset-3 sm:-inset-4 border border-[#5A664D]/25 pointer-events-none" />
               
-              <div className="relative overflow-hidden bg-[#EFECE6] shadow-luxury aspect-[4/5]">
+              <div className="relative overflow-hidden bg-[#DDE5D6] shadow-luxury aspect-[4/5]">
                 <img
                   src={aesthetic.image}
                   alt="Aishka Clothing editorial piece in neutral champagne tone"
@@ -26,7 +26,7 @@ export default function BrandQuote({ onReadMore }) {
               </div>
 
               {/* Small floating craft badge */}
-              <div className="absolute -bottom-5 -right-4 sm:-right-6 bg-[#1F1B18] text-[#FAF7F2] px-4 sm:px-5 py-3 shadow-luxury border border-[#C5A059]/30">
+              <div className="absolute -bottom-5 -right-4 sm:-right-6 bg-[#1F1B18] text-[#FAF7F2] px-4 sm:px-5 py-3 shadow-luxury border border-[#5A664D]/30">
                 <p className="text-[9px] uppercase tracking-[0.25em] text-[#C5A059]">Purity of Form</p>
                 <p className="font-serif text-sm italic text-[#E6DDD4]">Slow & Mindful Tailoring</p>
               </div>
@@ -35,8 +35,8 @@ export default function BrandQuote({ onReadMore }) {
 
           {/* Copy Manifesto (Right Column) */}
           <div className="lg:col-span-7 order-1 lg:order-2 space-y-6 lg:pl-6">
-            <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#8E7B6C] font-medium">
-              <span className="w-6 h-[1px] bg-[#C5A059]" />
+            <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#5A664D] font-medium">
+              <span className="w-6 h-[1px] bg-[#5A664D]" />
               <span>{aesthetic.tag}</span>
             </div>
 
@@ -44,7 +44,7 @@ export default function BrandQuote({ onReadMore }) {
               {aesthetic.headline}
             </h2>
 
-            <div className="space-y-4 text-xs sm:text-sm text-[#6E665F] font-light leading-relaxed font-sans max-w-xl">
+            <div className="space-y-4 text-xs sm:text-sm text-[#5A664D]/90 font-light leading-relaxed font-sans max-w-xl">
               <p>{aesthetic.p1}</p>
               <p>{aesthetic.p2}</p>
             </div>
@@ -52,7 +52,7 @@ export default function BrandQuote({ onReadMore }) {
             <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <button
                 onClick={onReadMore}
-                className="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.2em] font-sans text-[#1F1B18] border-b border-[#1F1B18] pb-1 hover:text-[#C5A059] hover:border-[#C5A059] transition-colors focus:outline-none"
+                className="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.2em] font-sans text-[#1F1B18] border-b border-[#1F1B18] pb-1 hover:text-[#5A664D] hover:border-[#5A664D] transition-colors focus:outline-none"
               >
                 <span>Read The Full Story</span>
                 <ArrowRight size={14} />

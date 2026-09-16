@@ -5,7 +5,7 @@ export default function StorySection() {
   const { story } = CONTENT.about;
 
   return (
-    <section className="py-16 sm:py-24 bg-[#FAF7F2] text-[#1F1B18] border-b border-[#C8B6A6]/30">
+    <section className="py-16 sm:py-24 bg-[#E8EFE3] text-[#1F1B18] border-b border-[#5A664D]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Two-Column Showcase */}
@@ -14,7 +14,7 @@ export default function StorySection() {
           {/* Left Column: High-Fashion Imagery */}
           <div className="lg:col-span-5">
             <div className="relative">
-              <div className="relative overflow-hidden bg-[#EFECE6] shadow-luxury aspect-[3/4]">
+              <div className="relative overflow-hidden bg-[#DDE5D6] shadow-luxury aspect-[3/4]">
                 <img
                   src={story.image}
                   alt="Aishka Clothing atelier creation worn with modest poise"
@@ -23,7 +23,7 @@ export default function StorySection() {
               </div>
               
               {/* Secondary Inset Visual */}
-              <div className="hidden sm:block absolute -bottom-10 -right-8 w-44 aspect-square border-4 border-[#FAF7F2] shadow-luxury overflow-hidden">
+              <div className="hidden sm:block absolute -bottom-10 -right-8 w-44 aspect-square border-4 border-[#E8EFE3] shadow-luxury overflow-hidden">
                 <img
                   src={story.detailImage}
                   alt="Textile detail and stitching close up"

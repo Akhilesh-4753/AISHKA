@@ -11,17 +11,17 @@ export default function FaqAccordion() {
   };
 
   return (
-    <div className="mt-20 border-t border-[#C8B6A6]/30 pt-16">
+    <div className="mt-20 border-t border-[#5A664D]/25 pt-16">
       <div className="max-w-3xl mx-auto">
         
         <div className="text-center mb-10">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#8E7B6C] font-medium block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-[#5A664D] font-medium block mb-2">
             CLIENT ASSISTANCE
           </span>
           <h3 className="font-serif text-3xl sm:text-4xl text-[#1F1B18] font-normal">
             Frequently Asked Questions
           </h3>
-          <div className="w-12 h-[1px] bg-[#C5A059] mx-auto mt-4" />
+          <div className="w-12 h-[1px] bg-[#5A664D] mx-auto mt-4" />
         </div>
 
         <div className="space-y-4">
@@ -30,7 +30,7 @@ export default function FaqAccordion() {
             return (
               <div
                 key={index}
-                className="bg-[#FAF7F2] border border-[#C8B6A6]/40 transition-all duration-300"
+                className="bg-[#F2F7EE] border border-[#5A664D]/25 transition-all duration-300 shadow-subtle"
               >
                 <button
                   type="button"
@@ -42,14 +42,14 @@ export default function FaqAccordion() {
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`text-[#C5A059] flex-shrink-0 transform transition-transform duration-300 ${
+                    className={`text-[#5A664D] flex-shrink-0 transform transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : 'rotate-0'
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#6E665F] font-light leading-relaxed font-sans border-t border-[#C8B6A6]/20">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#5A664D] font-light leading-relaxed font-sans border-t border-[#5A664D]/15">
                     {faq.answer}
                   </div>
                 )}

@@ -16,10 +16,10 @@ export default function GalleryGrid({ items, onSelectImage }) {
         <div
           key={item.id}
           onClick={() => onSelectImage(item)}
-          className="group relative cursor-pointer bg-[#FAF7F2] border border-[#C8B6A6]/35 overflow-hidden shadow-subtle hover:shadow-luxury transition-all duration-500"
+          className="group relative cursor-pointer bg-[#F2F7EE] border border-[#5A664D]/25 overflow-hidden shadow-subtle hover:shadow-luxury transition-all duration-500"
         >
           {/* Image Container */}
-          <div className="relative aspect-[3/4] overflow-hidden bg-[#EFECE6]">
+          <div className="relative aspect-[3/4] overflow-hidden bg-[#DDE5D6]">
             <img
               src={item.image}
               alt={item.alt}
@@ -36,7 +36,7 @@ export default function GalleryGrid({ items, onSelectImage }) {
               </div>
               
               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="inline-block px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] bg-[#C5A059] text-[#FAF7F2] font-medium mb-2">
+                <span className="inline-block px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] bg-[#5A664D] text-[#FAF7F2] font-medium mb-2">
                   {item.category}
                 </span>
                 <h4 className="font-serif text-xl sm:text-2xl text-[#FAF7F2] font-normal">
@@ -50,12 +50,12 @@ export default function GalleryGrid({ items, onSelectImage }) {
           </div>
 
           {/* Under-Card Minimal Label */}
-          <div className="p-4 sm:p-5 flex items-center justify-between bg-[#FAF7F2] border-t border-[#C8B6A6]/20">
+          <div className="p-4 sm:p-5 flex items-center justify-between bg-[#F2F7EE] border-t border-[#5A664D]/15">
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#C5A059] font-medium">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#5A664D] font-medium">
                 {item.tag}
               </p>
-              <h5 className="font-serif text-base sm:text-lg text-[#1F1B18] font-normal group-hover:text-[#C5A059] transition-colors">
+              <h5 className="font-serif text-base sm:text-lg text-[#1F1B18] font-normal group-hover:text-[#5A664D] transition-colors">
                 {item.title}
               </h5>
             </div>

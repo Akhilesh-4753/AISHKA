@@ -5,18 +5,18 @@ export default function CraftPillars({ onOpenAppointment }) {
   const { craftPillars, editorialBanner } = CONTENT.home;
 
   return (
-    <section className="py-20 sm:py-28 bg-[#FAF7F2] text-[#1F1B18]">
+    <section className="py-20 sm:py-28 bg-[#E8EFE3] text-[#1F1B18]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#8E7B6C] font-medium block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-[#5A664D] font-medium block mb-2">
             OUR PROMISE
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#1F1B18] font-normal">
             Signature Standards
           </h2>
-          <div className="w-12 h-[1px] bg-[#C5A059] mx-auto mt-4" />
+          <div className="w-12 h-[1px] bg-[#5A664D] mx-auto mt-4" />
         </div>
 
         {/* 4 Pillars Grid */}
@@ -24,15 +24,15 @@ export default function CraftPillars({ onOpenAppointment }) {
           {craftPillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="p-6 sm:p-8 bg-[#F5F3EF] border border-[#C8B6A6]/30 shadow-subtle hover:border-[#C5A059]/60 transition-all duration-300"
+              className="p-6 sm:p-8 bg-[#F2F7EE] border border-[#5A664D]/25 shadow-subtle hover:border-[#5A664D] transition-all duration-300"
             >
-              <span className="font-serif text-3xl text-[#C5A059] font-light block mb-4">
+              <span className="font-serif text-3xl text-[#5A664D] font-light block mb-4">
                 {pillar.number}
               </span>
               <h3 className="font-serif text-xl text-[#1F1B18] font-normal mb-3">
                 {pillar.title}
               </h3>
-              <p className="text-xs text-[#6E665F] font-light leading-relaxed font-sans">
+              <p className="text-xs text-[#5A664D]/90 font-light leading-relaxed font-sans">
                 {pillar.description}
               </p>
             </div>
@@ -59,7 +59,7 @@ export default function CraftPillars({ onOpenAppointment }) {
             <div className="pt-4">
               <button
                 onClick={onOpenAppointment}
-                className="px-8 py-3.5 bg-[#FAF7F2] text-[#1F1B18] text-xs uppercase tracking-[0.25em] font-medium hover:bg-[#C5A059] hover:text-[#FAF7F2] transition-colors border border-[#FAF7F2]"
+                className="px-8 py-3.5 bg-[#5A664D] text-[#FAF7F2] text-xs uppercase tracking-[0.25em] font-medium hover:bg-[#434D39] transition-colors border border-[#5A664D] shadow-sm"
               >
                 REQUEST A PRIVATE CONSULTATION
               </button>

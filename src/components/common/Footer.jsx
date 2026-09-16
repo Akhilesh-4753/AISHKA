@@ -1,6 +1,6 @@
 import React from 'react';
-import { MessageCircle, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
-import { InstagramIcon } from './Icons';
+import { Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { InstagramIcon, WhatsAppIcon } from './Icons';
 import { CONTENT } from '../../data/contentData';
 import { THEME } from '../../styles/theme';
 
@@ -23,14 +23,17 @@ export default function Footer({ setActivePage }) {
           
           {/* Brand Col */}
           <div className="space-y-4">
-            <div>
-              <span className="block font-serif text-2xl sm:text-3xl tracking-[0.22em] text-[#FAF7F2] font-medium">
-                AISHKA
-              </span>
-              <span className="block text-[9px] tracking-[0.45em] text-[#C8B6A6] uppercase font-sans -mt-0.5">
-                CLOTHING
-              </span>
-            </div>
+            <button
+              onClick={scrollToTop}
+              className="block group text-left focus:outline-none"
+              aria-label="AISHKA CLOTHING Home"
+            >
+              <img
+                src="/logo-transparent-light.png"
+                alt="AISHKA CLOTHING"
+                className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </button>
             <p className="text-xs uppercase tracking-[0.18em] text-[#C5A059] font-medium">
               {CONTENT.brand.tagline}
             </p>
@@ -54,7 +57,7 @@ export default function Footer({ setActivePage }) {
                 className="w-9 h-9 rounded-full border border-[#FAF7F2]/20 flex items-center justify-center text-[#FAF7F2] hover:text-[#25D366] hover:border-[#25D366] transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageCircle size={16} />
+                <WhatsAppIcon size={16} />
               </a>
               <a
                 href={`mailto:${THEME.brand.email}`}

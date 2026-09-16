@@ -14,13 +14,13 @@ export default function GalleryFilter({ activeCategory, onSelectCategory, itemCo
             onClick={() => onSelectCategory(category)}
             className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-sans transition-all duration-300 focus:outline-none ${
               isActive
-                ? 'bg-[#1F1B18] text-[#FAF7F2] border border-[#1F1B18] shadow-sm'
-                : 'bg-[#FAF7F2] text-[#1F1B18]/70 border border-[#C8B6A6]/40 hover:border-[#1F1B18] hover:text-[#1F1B18]'
+                ? 'bg-[#5A664D] text-[#FAF7F2] border border-[#5A664D] shadow-sm'
+                : 'bg-[#F2F7EE] text-[#1F1B18]/80 border border-[#5A664D]/25 hover:border-[#5A664D] hover:text-[#1F1B18]'
             }`}
           >
             <span>{category}</span>
             {count !== undefined && (
-              <span className={`ml-2 text-[10px] ${isActive ? 'text-[#C5A059]' : 'text-[#8E7B6C]'}`}>
+              <span className={`ml-2 text-[10px] ${isActive ? 'text-[#FAF7F2]/90' : 'text-[#5A664D]'}`}>
                 ({count})
               </span>
             )}

@@ -35,7 +35,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1F1B18] font-sans antialiased selection:bg-[#C8B6A6]/40 selection:text-[#1F1B18]">
+    <div className="min-h-screen flex flex-col bg-[#E8EFE3] text-[#1F1B18] font-sans antialiased selection:bg-[#5A664D]/30 selection:text-[#1F1B18]">
       {/* Top Announcement Bar */}
       <AnnouncementBar />
 
@@ -45,31 +45,6 @@ export default function App() {
         setActivePage={handlePageChange}
         onOpenAppointment={() => setIsAppointmentOpen(true)}
       />
-
-      {/* Editorial Section View Indicator Bar (Matching Reference) */}
-      <div className="bg-[#EFECE6]/70 border-b border-[#C8B6A6]/30 py-1.5 px-4 text-[11px] font-sans text-[#8E7B6C] flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <span className="w-2 h-2 rounded-full bg-[#C5A059] inline-block animate-pulse" />
-          <span className="uppercase tracking-wider">Viewing Section:</span>
-          <span className="font-serif italic text-sm text-[#1F1B18] font-medium capitalize">
-            {activePage}
-          </span>
-        </div>
-        <div className="hidden sm:flex items-center space-x-3 text-[10px] uppercase tracking-widest text-[#8E7B6C]">
-          <span>Switch View:</span>
-          {['home', 'about', 'gallery', 'contact'].map((p) => (
-            <button
-              key={p}
-              onClick={() => handlePageChange(p)}
-              className={`hover:text-[#1F1B18] capitalize transition-colors ${
-                activePage === p ? 'text-[#C5A059] font-medium underline underline-offset-4' : ''
-              }`}
-            >
-              {p}
-            </button>
-          ))}
-        </div>
-      </div>
 
       {/* Page Content */}
       <main className="flex-grow">
