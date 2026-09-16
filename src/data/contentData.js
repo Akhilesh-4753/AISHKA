@@ -15,7 +15,7 @@ export const CONTENT = {
       subtitle: 'Everyday casual wear with comfort, simplicity, and effortless style.',
       primaryCta: 'EXPLORE COLLECTION',
       secondaryCta: 'DISCOVER OUR STORY',
-      appointmentCta: 'BOOK APPOINTMENT',
+      appointmentCta: 'CONNECT WITH US',
       bgImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop',
     },
     

@@ -22,7 +22,7 @@ export default function ValuesGrid() {
           {pillars.map((item) => (
             <div
               key={item.number}
-              className="bg-[#F2F7EE] p-8 sm:p-10 border border-[#5A664D]/25 shadow-subtle hover:shadow-luxury hover:border-[#5A664D] transition-all duration-300 flex flex-col justify-between"
+              className="bg-[#F2F7EE] p-8 sm:p-10 border border-[#5A664D]/20 shadow-subtle hover:-translate-y-2 hover:shadow-luxury transition-all duration-300 ease-out flex flex-col justify-between cursor-default"
             >
               <div>
                 <span className="font-serif text-4xl text-[#5A664D] font-light block mb-6">

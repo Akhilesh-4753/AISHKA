@@ -26,7 +26,7 @@ export default function FeaturedGrid({ onSelectCategory }) {
             <div
               key={item.id}
               className="group bg-[#F2F7EE] border border-[#5A664D]/25 overflow-hidden shadow-subtle hover:shadow-luxury transition-all duration-500 flex flex-col cursor-pointer"
-              onClick={() => onSelectCategory(item.category)}
+              onClick={() => onSelectCategory && onSelectCategory(item.category)}
             >
               {/* Image Container with Elegant Zoom */}
               <div className="relative aspect-[3/4] overflow-hidden bg-[#DDE5D6]">

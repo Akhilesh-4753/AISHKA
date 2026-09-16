@@ -1,16 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X, MessageSquareQuote } from 'lucide-react';
 import { THEME } from '../../styles/theme';
 
 export default function Navbar({ activePage, setActivePage, onOpenAppointment }) {
+  const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      // Always visible when at the top of the page
+      if (currentScrollY <= 60) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY + 8) {
+        // Scrolling down -> hide navbar smoothly
+        setIsVisible(false);
+        setMobileMenuOpen(false);
+      } else if (currentScrollY < lastScrollY - 8) {
+        // Scrolling up -> show navbar smoothly
+        setIsVisible(true);
+      }
+
+      setIsScrolled(currentScrollY > 20);
+      lastScrollY = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -28,23 +47,23 @@ export default function Navbar({ activePage, setActivePage, onOpenAppointment })
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#E8EFE3]/95 backdrop-blur-md shadow-luxury py-2.5 border-b border-[#5A664D]/25'
-          : 'bg-[#E8EFE3] py-3 sm:py-4 border-b border-[#5A664D]/15'
-      }`}
+      className={`sticky top-0 z-40 transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
+        } ${isScrolled
+          ? 'bg-[#E8EFE3]/95 backdrop-blur-md shadow-luxury py-2 border-b border-[#5A664D]/25'
+          : 'bg-[#E8EFE3] py-2.5 sm:py-3.5 border-b border-[#5A664D]/15'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo - Changed from text to uploaded Logo Image */}
+          {/* Brand Logo - High Definition Clean Transparent Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center space-x-3 group focus:outline-none"
+            className="flex items-center group focus:outline-none py-1"
             aria-label="AISHKA CLOTHING Home"
           >
             <img
               src="/logo-transparent.png"
-              alt="AISHKA CLOTHING"
+              alt="AISHKA CLOTHING - Timeless, Modest, Elegant"
               className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </button>
@@ -57,11 +76,10 @@ export default function Navbar({ activePage, setActivePage, onOpenAppointment })
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`relative py-1 text-xs lg:text-sm uppercase tracking-[0.18em] transition-colors duration-200 focus:outline-none ${
-                    isActive
-                      ? 'text-[#5A664D] font-semibold'
-                      : 'text-[#1F1B18]/80 hover:text-[#5A664D]'
-                  }`}
+                  className={`relative py-1 text-xs lg:text-sm uppercase tracking-[0.18em] transition-colors duration-200 focus:outline-none ${isActive
+                    ? 'text-[#5A664D] font-semibold'
+                    : 'text-[#1F1B18]/80 hover:text-[#5A664D]'
+                    }`}
                 >
                   {link.label}
                   {isActive && (
@@ -72,13 +90,13 @@ export default function Navbar({ activePage, setActivePage, onOpenAppointment })
             })}
           </nav>
 
-          {/* Right Action: Book Appointment CTA */}
+          {/* Right Action: Connect With Us CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={onOpenAppointment}
               className="px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] font-sans text-[#FAF7F2] bg-[#5A664D] hover:bg-[#434D39] transition-all duration-300 shadow-sm rounded-none focus:outline-none border border-[#5A664D]"
             >
-              BOOK APPOINTMENT
+              CONNECT WITH US
             </button>
           </div>
 
@@ -105,11 +123,10 @@ export default function Navbar({ activePage, setActivePage, onOpenAppointment })
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`text-left py-2 text-sm uppercase tracking-[0.2em] transition-colors ${
-                    isActive
-                      ? 'text-[#5A664D] font-semibold pl-2 border-l-2 border-[#5A664D]'
-                      : 'text-[#1F1B18]/80 hover:text-[#5A664D]'
-                  }`}
+                  className={`text-left py-2 text-sm uppercase tracking-[0.2em] transition-colors ${isActive
+                    ? 'text-[#5A664D] font-semibold pl-2 border-l-2 border-[#5A664D]'
+                    : 'text-[#1F1B18]/80 hover:text-[#5A664D]'
+                    }`}
                 >
                   {link.label}
                 </button>
@@ -123,8 +140,8 @@ export default function Navbar({ activePage, setActivePage, onOpenAppointment })
                 }}
                 className="w-full py-3 text-xs uppercase tracking-[0.2em] font-sans text-[#FAF7F2] bg-[#5A664D] hover:bg-[#434D39] transition-all flex items-center justify-center space-x-2 shadow-sm"
               >
-                <Calendar size={14} />
-                <span>BOOK APPOINTMENT</span>
+                <MessageSquareQuote size={14} />
+                <span>CONNECT WITH US</span>
               </button>
             </div>
           </nav>

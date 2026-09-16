@@ -24,7 +24,7 @@ export default function CraftPillars({ onOpenAppointment }) {
           {craftPillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="p-6 sm:p-8 bg-[#F2F7EE] border border-[#5A664D]/25 shadow-subtle hover:border-[#5A664D] transition-all duration-300"
+              className="p-6 sm:p-8 bg-[#F2F7EE] border border-[#5A664D]/20 shadow-subtle hover:-translate-y-2 hover:shadow-luxury transition-all duration-300 ease-out cursor-default"
             >
               <span className="font-serif text-3xl text-[#5A664D] font-light block mb-4">
                 {pillar.number}

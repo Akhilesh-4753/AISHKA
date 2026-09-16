@@ -27,26 +27,47 @@ export default function Hero({ onExplore, onDiscoverStory }) {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-20 flex flex-col items-center">
-        
+
         {/* Pill Badge */}
-        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#1F1B18]/60 backdrop-blur-md border border-[#FAF7F2]/25 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#E6DDD4] mb-8 animate-fade-in shadow-luxury">
+        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#1F1B18]/60 backdrop-blur-md border border-[#FAF7F2]/25 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#E6DDD4] mb-6 animate-fade-in shadow-luxury">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
           <span>{hero.badge}</span>
         </div>
 
-        {/* Brand Headline with Uploaded Logo Emblem */}
-        <div className="mb-4">
-          <img
-            src="/logo-transparent-light.png"
-            alt="AISHKA CLOTHING"
-            className="h-28 sm:h-36 md:h-40 w-auto mx-auto object-contain drop-shadow-lg transition-transform hover:scale-105 duration-500"
-          />
+        {/* Main Brand Headline */}
+        <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl tracking-[0.16em] sm:tracking-[0.22em] font-normal uppercase text-[#FAF7F2] leading-none mb-3 drop-shadow-md">
+          AISHKA
+          <span className="block font-light text-2xl sm:text-4xl md:text-5xl tracking-[0.32em] sm:tracking-[0.4em] text-[#C5A059] mt-2 sm:mt-3">
+            CLOTHING
+          </span>
+        </h1>
+
+        {/* Elegant Filigree Accent Divider */}
+        <div className="flex items-center justify-center space-x-3 my-4 sm:my-5 opacity-80">
+          <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-r from-transparent to-[#C5A059]" />
+          <div className="w-1.5 h-1.5 rotate-45 bg-[#C5A059]" />
+          <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-l from-transparent to-[#C5A059]" />
         </div>
 
-        {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-base md:text-lg text-[#FAF7F2]/90 font-light tracking-wide max-w-2xl mx-auto mb-10 leading-relaxed">
+        {/* Subtitle & Narrative */}
+        <p className="font-sans text-sm sm:text-base md:text-lg text-[#FAF7F2]/90 font-light tracking-wide max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
           {hero.subtitle}
         </p>
+
+        {/* Curated Luxury Feature Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#FAF7F2]/80 font-light">
+          <span className="px-3.5 py-1 rounded-full bg-[#1F1B18]/50 backdrop-blur-md border border-[#FAF7F2]/15 shadow-sm">
+            Breathable Fabrics
+          </span>
+          <span className="hidden sm:inline text-[#C5A059]">•</span>
+          <span className="px-3.5 py-1 rounded-full bg-[#1F1B18]/50 backdrop-blur-md border border-[#FAF7F2]/15 shadow-sm">
+            Modest Silhouettes
+          </span>
+          <span className="hidden sm:inline text-[#C5A059]">•</span>
+          <span className="px-3.5 py-1 rounded-full bg-[#1F1B18]/50 backdrop-blur-md border border-[#FAF7F2]/15 shadow-sm">
+            Everyday Simplicity
+          </span>
+        </div>
 
         {/* Dual Luxury Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
@@ -56,7 +77,7 @@ export default function Hero({ onExplore, onDiscoverStory }) {
           >
             {hero.primaryCta}
           </button>
-          
+
           <button
             onClick={onDiscoverStory}
             className="w-full sm:w-auto px-8 py-4 bg-transparent text-[#FAF7F2] text-xs uppercase tracking-[0.25em] font-medium border border-[#FAF7F2]/60 hover:bg-[#FAF7F2]/15 hover:border-[#FAF7F2] transition-all duration-300 backdrop-blur-sm"

@@ -81,7 +81,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                   <span>Private Atelier Fitting</span>
                 </div>
                 <h3 className="font-serif text-2xl sm:text-3xl text-[#1F1B18] font-normal tracking-wide">
-                  Book an Appointment
+                  Connect With Us
                 </h3>
                 <p className="text-xs text-[#5A664D]/90 mt-1 font-light max-w-md mx-auto">
                   Experience personal draping, custom bespoke sizing, and private consultations with our creative team.
@@ -197,7 +197,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
                     className="flex-1 py-3 bg-[#25D366] text-white text-xs uppercase tracking-[0.18em] font-sans font-medium hover:bg-[#20ba59] transition-all flex items-center justify-center space-x-2 shadow-sm"
                   >
                     <MessageSquare size={15} />
-                    <span>BOOK VIA WHATSAPP</span>
+                    <span>CONNECT VIA WHATSAPP</span>
                   </button>
                 </div>
               </form>

@@ -30,9 +30,7 @@ export default function Home({ setActivePage, setSelectedCategory, onOpenAppoint
       <BrandQuote
         onReadMore={handleDiscoverStory}
       />
-      <FeaturedGrid
-        onSelectCategory={handleSelectFeaturedCategory}
-      />
+      <FeaturedGrid onSelectCategory={handleSelectFeaturedCategory} />
       <CraftPillars
         onOpenAppointment={onOpenAppointment}
       />
