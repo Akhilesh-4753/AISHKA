@@ -71,7 +71,7 @@ export default function ContactForm() {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="+91 70120 71909"
                 className="w-full bg-[#E8EFE3] border border-[#5A664D]/30 px-4 py-3 text-xs text-[#1F1B18] placeholder-[#5A664D]/50 focus:border-[#5A664D] focus:outline-none transition-colors"
               />
             </div>

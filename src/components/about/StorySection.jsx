@@ -49,20 +49,30 @@ export default function StorySection() {
               </p>
             </div>
 
-            {/* Quick First Pillar Teaser as seen in screenshot */}
-            <div className="pt-6 border-t border-[#C8B6A6]/30">
-              <div className="flex items-start space-x-4">
-                <span className="w-8 h-8 rounded-full bg-[#EFECE6] border border-[#C8B6A6]/50 flex items-center justify-center font-serif text-xs text-[#8E7B6C] flex-shrink-0">
-                  01
-                </span>
-                <div>
-                  <h4 className="font-serif text-lg text-[#1F1B18] font-normal">
-                    Modest & Thoughtful Draping
-                  </h4>
-                  <p className="text-xs text-[#8E7B6C] font-light mt-1 font-sans">
-                    Cut generously to offer dignified coverage without losing sculptural silhouette.
-                  </p>
-                </div>
+            {/* The Three Core Design Pillars */}
+            <div className="pt-6 border-t border-[#5A664D]/20 space-y-3.5">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#5A664D] font-medium block">
+                OUR THREE DESIGN PILLARS
+              </span>
+              <div className="space-y-3">
+                {CONTENT.about.pillars.map((pillar) => (
+                  <div
+                    key={pillar.number}
+                    className="flex items-start space-x-3.5 p-3.5 bg-[#F2F7EE] border border-[#5A664D]/15 shadow-subtle hover:border-[#5A664D]/35 transition-colors"
+                  >
+                    <span className="w-7 h-7 rounded-full bg-[#E8EFE3] border border-[#5A664D]/30 flex items-center justify-center font-serif text-xs text-[#5A664D] font-medium flex-shrink-0 mt-0.5">
+                      {pillar.number}
+                    </span>
+                    <div>
+                      <h4 className="font-serif text-base text-[#1F1B18] font-normal leading-snug">
+                        {pillar.title}
+                      </h4>
+                      <p className="text-xs text-[#5A664D]/90 font-light mt-0.5 font-sans leading-relaxed">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

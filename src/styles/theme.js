@@ -28,12 +28,12 @@ export const THEME = {
     logoBadge: '/logo-emblem.png',
     tagline: 'TIMELESS • MODEST • ELEGANT',
     subCopy: 'Everyday casual wear with comfort, simplicity, and effortless style',
-    whatsapp: '+919876543210',
-    whatsappDisplay: '+91 98765 43210',
+    whatsapp: '+917012071909',
+    whatsappDisplay: '+91 70120 71909',
     instagram: '@aishkaclothing',
     instagramUrl: 'https://instagram.com/aishkaclothing',
-    email: 'contact@aishkaclothing.com',
-    address: 'Studio & Atelier Visits: By Appointment Only',
+    email: 'aishkaclothing04@gmail.com',
+    address: 'AISHKA CLOTHING, 6th Floor, Seiken Greenwich, Calicut - 673001',
     hours: 'Monday – Saturday: 10:30 AM – 7:30 PM | Sunday: Closed',
   }
 };

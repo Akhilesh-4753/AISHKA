@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnnouncementBar from './components/common/AnnouncementBar';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import FloatingWhatsApp from './components/common/FloatingWhatsApp';
@@ -36,9 +35,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#E8EFE3] text-[#1F1B18] font-sans antialiased selection:bg-[#5A664D]/30 selection:text-[#1F1B18]">
-      {/* Top Announcement Bar */}
-      <AnnouncementBar />
-
       {/* Main Luxury Navbar (Strictly 4 links: Home, About, Gallery, Contact) */}
       <Navbar
         activePage={activePage}

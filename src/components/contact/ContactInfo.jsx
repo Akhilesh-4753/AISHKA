@@ -26,15 +26,18 @@ export default function ContactInfo() {
             <WhatsAppIcon size={24} />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="flex items-center justify-between">
-              <h4 className="text-xs uppercase tracking-[0.2em] text-[#1F1B18] font-medium font-sans">
-                CHAT ON WHATSAPP
-              </h4>
-              <ExternalLink size={14} className="text-[#5A664D] group-hover:text-[#25D366] transition-colors" />
-            </div>
-            <p className="text-xs text-[#5A664D] font-light mt-1 font-sans">
-              Instant responses for sizing and custom consultations
-            </p>
+              <div className="flex items-center justify-between">
+                <h4 className="text-xs uppercase tracking-[0.2em] text-[#1F1B18] font-medium font-sans">
+                  CHAT ON WHATSAPP
+                </h4>
+                <ExternalLink size={14} className="text-[#5A664D] group-hover:text-[#25D366] transition-colors" />
+              </div>
+              <p className="text-xs font-medium text-[#25D366] font-sans mt-0.5">
+                {THEME.brand.whatsappDisplay}
+              </p>
+              <p className="text-xs text-[#5A664D] font-light mt-0.5 font-sans">
+                Instant responses for sizing, pricing, and custom consultations
+              </p>
           </div>
         </div>
       </a>

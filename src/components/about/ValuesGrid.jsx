@@ -31,9 +31,20 @@ export default function ValuesGrid() {
                 <h3 className="font-serif text-2xl text-[#1F1B18] font-normal mb-4">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#5A664D]/90 font-light leading-relaxed font-sans">
+                <p className="text-xs sm:text-sm text-[#5A664D]/90 font-light leading-relaxed font-sans mb-6">
                   {item.description}
                 </p>
+
+                {item.points && (
+                  <ul className="space-y-3 pt-5 border-t border-[#5A664D]/15">
+                    {item.points.map((point, idx) => (
+                      <li key={idx} className="flex items-start space-x-2.5 text-xs text-[#1F1B18]/85 font-light leading-relaxed font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5A664D] mt-1.5 flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
               <div className="mt-8 pt-4 border-t border-[#5A664D]/15">

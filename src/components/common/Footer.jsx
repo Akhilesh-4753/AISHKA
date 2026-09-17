@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { Mail, MapPin, Clock, ArrowUp, Phone } from 'lucide-react';
 import { InstagramIcon, WhatsAppIcon } from './Icons';
 import { CONTENT } from '../../data/contentData';
 import { THEME } from '../../styles/theme';
@@ -91,24 +91,53 @@ export default function Footer({ setActivePage }) {
             </ul>
           </div>
 
-          {/* Atelier Hours Col */}
+          {/* Atelier & Contact Col */}
           <div>
             <h4 className="font-serif text-sm tracking-[0.15em] uppercase text-[#FAF7F2] mb-4 pb-2 border-b border-[#FAF7F2]/10 inline-block">
-              Studio & Hours
+              Atelier & Contact
             </h4>
-            <div className="space-y-3 text-xs text-[#C8B6A6] font-light">
+            <div className="space-y-3.5 text-xs text-[#C8B6A6] font-light">
               <div className="flex items-start space-x-2.5">
-                <Clock size={15} className="text-[#C5A059] flex-shrink-0 mt-0.5" />
+                <MapPin size={16} className="text-[#C5A059] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[#FAF7F2] font-normal">Monday – Saturday</p>
-                  <p>10:30 AM – 7:30 PM</p>
-                  <p className="mt-1 text-[#FAF7F2] font-normal">Sunday</p>
-                  <p>By Prior Appointment</p>
+                  <p className="text-[#FAF7F2] font-medium leading-snug">
+                    AISHKA CLOTHING
+                  </p>
+                  <p className="text-[#C8B6A6] leading-relaxed mt-0.5">
+                    6th Floor, Seiken Greenwich,<br />
+                    Calicut - 673001
+                  </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-2.5 pt-1">
-                <MapPin size={15} className="text-[#C5A059] flex-shrink-0 mt-0.5" />
-                <p>Private Studio Consultations across Delhi NCR & Worldwide Online</p>
+
+              <div className="flex items-center space-x-2.5 pt-1">
+                <WhatsAppIcon size={15} className="text-[#25D366] flex-shrink-0" />
+                <a
+                  href={`https://wa.me/${THEME.brand.whatsapp.replace('+', '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#25D366] transition-colors"
+                >
+                  {THEME.brand.whatsappDisplay}
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-2.5">
+                <Mail size={15} className="text-[#C5A059] flex-shrink-0" />
+                <a
+                  href={`mailto:${THEME.brand.email}`}
+                  className="hover:text-[#C5A059] transition-colors break-all"
+                >
+                  {THEME.brand.email}
+                </a>
+              </div>
+
+              <div className="flex items-start space-x-2.5 pt-1 border-t border-[#FAF7F2]/10">
+                <Clock size={15} className="text-[#C5A059] flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[#FAF7F2] font-normal">Mon – Sat: 10:30 AM – 7:30 PM</p>
+                  <p className="text-[#C8B6A6]/80 text-[11px]">Sunday: By Prior Appointment</p>
+                </div>
               </div>
             </div>
           </div>

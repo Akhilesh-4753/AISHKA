@@ -7,7 +7,7 @@ export const CONTENT = {
     subCopy: 'Everyday casual wear with comfort, simplicity, and effortless style',
     announcement: 'EVERYDAY CASUAL WEAR & BESPOKE COUTURE • TIMELESS • MODEST • ELEGANT',
   },
-  
+
   home: {
     hero: {
       badge: 'TIMELESS, MODEST, ELEGANT',
@@ -18,23 +18,23 @@ export const CONTENT = {
       appointmentCta: 'CONNECT WITH US',
       bgImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop',
     },
-    
+
     aesthetic: {
       tag: 'THE AISHKA AESTHETIC',
       headline: 'Curated for modest grace, handcrafted for everyday comfort.',
       p1: 'At Aishka Clothing, we believe elegance does not need to shout. Inspired by the understated allure of timeless silhouettes, our pieces harmonise refined tailoring with wearable everyday modesty.',
       p2: 'From sunlit morning errands to quiet evening gatherings, each garment is mindfully engineered from breathable, skin-friendly fabrics that honour your individuality and values.',
       quoteAuthor: 'Founder & Creative Director',
-      image: '/gallery/cornflower-blue-kaftan.jpg',
+      image: '/gallery/cornflower-blue-kaftan.png',
     },
-    
+
     featuredCollections: [
       {
         id: 'casual-line',
         badge: 'CASUAL LINE',
         title: 'Everyday Simplicity',
         description: 'Relaxed fits, natural textures, and effortless day-long comfort tailored for modest poise.',
-        image: '/gallery/indigo-teal-kaftan.jpg',
+        image: '/gallery/indigo-teal-kaftan.png',
         category: 'Everyday Casual',
       },
       {
@@ -54,7 +54,7 @@ export const CONTENT = {
         category: 'Checks & Stripes',
       },
     ],
-    
+
     craftPillars: [
       {
         number: '01',
@@ -90,14 +90,48 @@ export const CONTENT = {
       tag: 'OUR PHILOSOPHY & HERITAGE',
       title: 'A Symphony of Modesty, Craft & Comfort',
       subtitle: 'Where age-old craftsmanship harmonises with contemporary silhouettes.',
+      narrative: 'Rooted in timeless poise and slow-fashion sensibilities, Aishka Clothing was founded on the conviction that modesty and high elegance belong together. We craft enduring wardrobe investments with generous ease, breathable natural textiles, and bespoke tailoring that respects your values and moves effortlessly with your life.',
+      creed: '“Modesty is not an absence of style, but the highest expression of deliberate poise, quiet confidence, and enduring elegance.”',
+      commitments: [
+        {
+          num: '01',
+          tag: 'THE SILHOUETTE',
+          title: 'Sculptural Modesty',
+          desc: 'Dignified cuts, graceful fluid drapes, and mindful neckline and sleeve coverage engineered to flatter with zero cling.',
+        },
+        {
+          num: '02',
+          tag: 'THE TEXTILE',
+          title: 'Pure Breathable Fibres',
+          desc: '100% organic linen, hand-woven mulmul, and raw silk sourced directly from artisanal weaver clusters.',
+        },
+        {
+          num: '03',
+          tag: 'THE CRAFT',
+          title: 'Slow Batch Tailoring',
+          desc: 'Conscious small-drop releases with hand-finished French seams, reinforced corners, and zero mass overproduction.',
+        },
+        {
+          num: '04',
+          tag: 'THE ATELIER',
+          title: 'Made-to-Measure Ease',
+          desc: 'Customized proportions, custom sleeve lengths, and bespoke fittings tailored for everyday ease and grand occasions.',
+        },
+      ],
+      badges: [
+        '100% Natural Fibres',
+        'Master Artisan Tailoring',
+        'Zero Mass Production',
+        'Bespoke Sizing Available',
+      ],
     },
-    
+
     story: {
       lead: 'Aishka Clothing was born out of a desire for fashion that respects both poise and ease. In a world crowded with transient, fast-moving aesthetics, we seek quiet longevity.',
       p1: 'Whether it is our signature line of everyday casual wear or our bespoke marriage couture and festive creations, every piece is sculpted with clean geometries, modest silhouettes, and artisanal finishes.',
       p2: 'We collaborate with master tailors and textile weavers who honor age-old crafts while adapting them for the contemporary woman. Our focus remains uncompromised: breathable textiles, soothing neutral tones, and flattering comfort that moves with you.',
-      image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
-      detailImage: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop',
+      image: '/gallery/emerald-forest-kaftan.jpg',
+      detailImage: '/gallery/harmonious-gingham-duet.jpg',
     },
 
     pillars: [
@@ -105,16 +139,34 @@ export const CONTENT = {
         number: '01',
         title: 'Modest & Thoughtful Draping',
         description: 'Cut generously to offer dignified coverage without losing sculptural silhouette. We celebrate form through ease, graceful falls, and bespoke comfort.',
+        points: [
+          'Dignified, relaxed cuts tailored for effortless modest poise and ease of movement',
+          'Breathable drop shoulders, fluid hemlines, and refined necklines for timeless versatility',
+          'Balanced drape engineered to fall naturally and flatter without restrictive clinging',
+          'Mindfully structured for seamless day-to-evening transitions in everyday life'
+        ]
       },
       {
         number: '02',
         title: 'Natural & Tactile Textures',
         description: 'Sourced from artisanal weaving clusters: fine mulmul, unbleached linen, raw tussar silk, and natural viscose that let the skin breathe through any season.',
+        points: [
+          '100% pure organic linen, fine mulmul cotton, and breathable textured flax slubs',
+          'Skin-kind, hypoallergenic fibers that grow softer and more lustrous with every wash',
+          'Earthy, serene color palette inspired by botanical dyes, sand dunes, and stone tones',
+          'Mindful slow-batch weaving that eliminates harsh synthetic finishes and chemical waste'
+        ]
       },
       {
         number: '03',
         title: 'Made-to-Measure Excellence',
         description: 'Each couture piece is personalized. Our studio pattern masters draft individual blocks to fit your proportions with precision and care.',
+        points: [
+          'Individual made-to-measure customizations for sleeve lengths, proportions, and modest heights',
+          'Meticulous French seams, reinforced stitching, and hand-finished hems by master artisans',
+          'Bespoke consultations for personalized colorways, celebratory styling, and private commissions',
+          'Dedicated studio fitting guidance ensuring an exacting and confident silhouette'
+        ]
       },
     ],
 
@@ -137,15 +189,15 @@ export const CONTENT = {
       title: 'Let us craft your next cherished piece',
       subtitle: 'Whether inquiring about our ready casual wear or booking a bespoke bridal consultation, our studio team is here to assist you.',
     },
-    
+
     studioInfo: {
-      address: 'Aishka Atelier & Design Studio',
-      locationDetails: 'Boutique appointments available across Delhi NCR & Virtual Consultations worldwide.',
+      address: 'AISHKA CLOTHING, 6th Floor, Seiken Greenwich, Calicut - 673001',
+      locationDetails: 'Bespoke bridal consultations & private atelier visits in Calicut. Virtual styling consultations worldwide.',
       hoursWeekdays: 'Monday to Saturday: 10:30 AM – 7:30 PM',
       hoursSunday: 'Sunday: By Prior Appointment Only',
-      phone: '+91 98765 43210',
-      whatsapp: '+919876543210',
-      email: 'contact@aishkaclothing.com',
+      phone: '+91 70120 71909',
+      whatsapp: '+917012071909',
+      email: 'aishkaclothing04@gmail.com',
       instagram: '@aishkaclothing',
     },
 
