@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function GalleryGrid({ items, onSelectImage }) {
   if (!items || items.length === 0) {
@@ -28,13 +28,7 @@ export default function GalleryGrid({ items, onSelectImage }) {
             />
             
             {/* Elegant Hover Overlay */}
-            <div className="absolute inset-0 bg-[#1F1B18]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6">
-              <div className="flex justify-end">
-                <div className="w-10 h-10 rounded-full bg-[#FAF7F2]/90 backdrop-blur-sm flex items-center justify-center text-[#1F1B18] shadow-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <Eye size={18} />
-                </div>
-              </div>
-              
+            <div className="absolute inset-0 bg-[#1F1B18]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <span className="inline-block px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] bg-[#5A664D] text-[#FAF7F2] font-medium mb-2">
                   {item.category}
